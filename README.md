@@ -1,1 +1,1 @@
-- 🔭 i’m currently exploring domain specific configuration languages.
+- 🔭 I am currently exploring domain specific configuration languages.
