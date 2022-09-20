@@ -1,1 +1,2 @@
-- 🔭 I am currently exploring domain specific configuration languages.
+- 🔭    I am currently exploring domain specific configuration languages.
+- 🔨 🔧 I am building libraries in Rust, Go and C langagues.
