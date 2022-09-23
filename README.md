@@ -1,1 +1,1 @@
-- 🔭 🔨 🔧 Building tools and compiler for data, systems integrations and analytics. 
+- 🔭 🔨 🔧 Building tools and compilers for data, systems integrations and analytics. 
