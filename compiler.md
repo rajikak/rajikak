@@ -14,6 +14,7 @@ The topics covered are in this tutorial are:
 # Introduction to Cool
 `Cool` (stands for Classroom Object Oriented Language) is programming langauge designed by [Prof. Alexander Aiken](http://theory.stanford.edu/~aiken/) for use in an undergraduate compiler course project. 
 So it can be implemented within a short period of time, but also rich enough to understand most aspects of an engineering a compiler. `Cool`'s features includes:
+* Static type system
 * Object orientation
 * Abstractions 
 * Re-use (inheritance)
@@ -26,7 +27,38 @@ So it can be implemented within a short period of time, but also rich enough to 
 * Every `Main` class should have a no argument `main()` method. That's where the program execution starts
 * Every method declaration is terminated by `;`
 * Every method signature is terminated by `:`
-* See the full syntax list in the [Cool's manual](./assets/cool-manual.pdf)
+ 
+Here's the full langauge syntax in BNF and regular expression format (see the full syntax list in the [Cool's manual](./assets/cool-manual.pdf)): 
+```
+program ::= [class;]+
+class   ::= class TYPE [inherits TYPE] { [feature; ]* } 
+feature ::= ID( [ formal [, formal]*] ) : TYPE { expr }
+          | ID:TYPE [ <- expr ] 
+formal  ::= ID : TYPE
+expr    ::= ID <- expr
+          | expr[@TYPE].ID( [ expr [, expr]*] ) | ID( [ expr [, expr]*] )
+          | if expr then expr else expr fi
+          | while expr loop expr pool
+          | { [expr; ]+ }
+          | let ID:TYPE [ <- expr ] [,ID:TYPE [ <- expr ]]* in expr | case expr of [ID : TYPE => expr; ]+esac
+          | new TYPE
+          | isvoid expr
+          | expr + expr
+          | expr − expr
+          | expr ∗ expr
+          | expr / expr
+          | ~expr
+          | expr < expr
+          | expr <= expr
+          | expr = expr
+          | not expr
+          | (expr)
+          | ID
+          | integer
+          | string
+          | true
+          | false
+```
 
 Here's a hello world `Cool` program (`hello-world.cl`): 
 ```
@@ -71,9 +103,10 @@ class Main {
 Compile the program again:
 ```
 $ cool syntax-error.cl
+$ 
 ```
 
-Here's a `Cool` program to calculate factorial (`fact.cl`):
+Here's a `Cool` program to calculate factorial (`fact.cl`) using recursion (`fact(i: Int)`) or iterations (`fact1(i: Int)`):
 ```
 class Main inherit A2i{
 	main(): Object {
@@ -99,16 +132,36 @@ class Main inherit A2i{
 };
 ```
 
-
 # LLVM
 LLVM is a compiler [infrastructure](https://llvm.org/pubs/2008-10-04-ACAT-LLVM-Intro.pdf). LLVM can be used to implement 
-compilers for other languages. This is possible because LLVM's modular architecture. LLVM is implemented as set of re-usable 
+compilers for other languages. This is possible because LLVM's modular architecture. LLVM is implemented as a set of re-usable 
 compiler components (for e.g. a re-usable x86 code generator so that a new compiler can re-use that code generator) that can re-used in other compiler implementations. This is the main benefit of LLVM compared to a monolithic 
 compiler project like [gcc](https://gcc.gnu.org). 
 
 ## Installing 
+In order to implement a compiler, we need to install LLVM libraries https://llvm.org/docs/GettingStarted.html#getting-started-with-llvm.
 
+Install cmake and add the bin path into `PATH`:                                                  
+```
+$ wget https://github.com/Kitware/CMake/releases/download/v3.24.2/cmake-3.24.2-linux-x86_64.tar.gz
+$ tar -xvf cmake-3.24.2-linux-x86_64.tar.gz
+```
 
+I am using below steps for compling and installing LLVM on a Linux system:
+```
+$ yum install -y git gcc gcc-c++ python zlib make
+$ pwd
+/home/ec2-user/
+$ git clone https://github.com/llvm/llvm-project.git
+$ mkdir llvm-project/build
+$ cd llvm-project/build
+$ cmake -G 'Unix Makefiles' \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_INSTALL_PREFIX=/home/ec2-user/llvm-project/install \
+        -DLLVM_TARGETS_TO_BUILD='X86' \
+		-DLLVM_ENABLE_PROJECTS='clang;lldb;lld;mlir;clang-tools-extra;compiler-rt' \
+        ../llvm 
+```
 
 # References
 * [CS 143 Compilers](https://web.stanford.edu/class/cs143/)
