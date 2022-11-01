@@ -138,6 +138,9 @@ compilers for other languages. This is possible because LLVM's modular architect
 compiler components (for e.g. a re-usable x86 code generator so that a new compiler can re-use that code generator) that can re-used in other compiler implementations. This is the main benefit of LLVM compared to a monolithic 
 compiler project like [gcc](https://gcc.gnu.org). 
 
+![LLVM Architecture](./figures/LLVM.svg)
+
+
 ## Installing 
 In order to implement a compiler, we need to install LLVM libraries https://llvm.org/docs/GettingStarted.html#getting-started-with-llvm.
 
@@ -159,7 +162,7 @@ $ cmake -G 'Unix Makefiles' \
         -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_INSTALL_PREFIX=/home/ec2-user/llvm-project/install \
         -DLLVM_TARGETS_TO_BUILD='X86' \
-		-DLLVM_ENABLE_PROJECTS='clang;lldb;lld;mlir;clang-tools-extra;compiler-rt' \
+        -DLLVM_ENABLE_PROJECTS='clang;lldb;lld;mlir;clang-tools-extra;compiler-rt' \
         ../llvm 
 ```
 
@@ -174,3 +177,5 @@ $ cmake -G 'Unix Makefiles' \
 * https://tomassetti.me/a-tutorial-on-how-to-write-a-compiler-using-llvm/
 * https://llvm.org/docs/tutorial/MyFirstLanguageFrontend/index.html
 * [Lexical Scanning in Go - Rob Pike](https://www.youtube.com/watch?v=HxaD_trXwRE)
+* [Compilers and IRs: LLVM IR, SPIR-V, and MLIR] (https://www.lei.chat/posts/compilers-and-irs-llvm-ir-spirv-and-mlir/)
+* [Superoptimizing LLVM](https://www.youtube.com/watch?v=Ux0YnVEaI6A)
