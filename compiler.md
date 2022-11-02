@@ -143,9 +143,11 @@ compiler project like [gcc](https://gcc.gnu.org).
 Figure1: LLVM's modular architecture              
 
 LLVM can be subdivided into three major components: the frontend, the intermediate representation (IR) and the backend. The 
-frontend is responsible for translating input source code (for e.g. C/C++, Rust or Cool programs). We will look how to write a 
+frontend is responsible for translating input source code (for e.g. C/C++, Rust or Cool programs) into LLVM IR. We will look how to write a 
 LLVM frontend as part of `Cool` compiler implementation in this tutorial. The IR is the core of the LLVM. The IR provides the most 
-significant benefit of LLVM for compiler implementers.
+significant benefit of LLVM for compiler implementers. The backend component is responsible for translating IR to a specific 
+hardware such as the Intel X86 or the ARM architecture. IR acts as the input to the backend and thereby allow compiler writers to 
+just to focus on writing a frontend for their language in order to produce a production ready compiler.
 
 ## LLVM IR
 
@@ -176,17 +178,25 @@ $ cmake -G 'Unix Makefiles' \
         ../llvm 
 ```
 
+# LLVM Frontend for Cool using ANTLR
+
 # References
-* [CS 143 Compilers](https://web.stanford.edu/class/cs143/)
-* [Compilers (edX)](https://learning.edx.org/course/course-v1:StanfordOnline+SOE.YCSCS1+2T2020/home)
-* [Engineering A Compiler](https://www.amazon.com/Engineering-Compiler-Keith-D-Cooper/dp/0128154128/ref=sr_1_1?keywords=engineering+a+compiler&qid=1666828042&qu=eyJxc2MiOiIxLjcwIiwicXNhIjoiMS40MyIsInFzcCI6IjEuNjkifQ%3D%3D&s=books&sprefix=Engineegin+a+compiler%2Cstripbooks%2C83&sr=1-1)
-* [Writing a C Compiler](https://norasandler.com/2017/11/29/Write-a-Compiler.html)
-* [Writing An Interpreter In Go](https://interpreterbook.com/)
-* [Writing A Compiler In Go](https://compilerbook.com/)
-* [Cool manual](./assets/cool-manual.pdf)([Online](https://web.stanford.edu/class/cs143/materials/cool-manual.pdf))
-* [LLVM](http://www.aosabook.org/en/llvm.html)
-* https://tomassetti.me/a-tutorial-on-how-to-write-a-compiler-using-llvm/
-* https://llvm.org/docs/tutorial/MyFirstLanguageFrontend/index.html
-* [Lexical Scanning in Go - Rob Pike](https://www.youtube.com/watch?v=HxaD_trXwRE)
-* [Compilers and IRs: LLVM IR, SPIR-V, and MLIR] (https://www.lei.chat/posts/compilers-and-irs-llvm-ir-spirv-and-mlir/)
-* [Superoptimizing LLVM](https://www.youtube.com/watch?v=Ux0YnVEaI6A)
+* Compiler Implementation
+  * [CS 143 Compilers](https://web.stanford.edu/class/cs143/)
+  * [Compilers (edX)](https://learning.edx.org/course/course-v1:StanfordOnline+SOE.YCSCS1+2T2020/home)
+  * [Engineering A Compiler](https://www.amazon.com/Engineering-Compiler-Keith-D-Cooper/dp/0128154128/ref=sr_1_1?keywords=engineering+a+compiler&qid=1666828042&qu=eyJxc2MiOiIxLjcwIiwicXNhIjoiMS40MyIsInFzcCI6IjEuNjkifQ%3D%3D&s=books&sprefix=Engineegin+a+compiler%2Cstripbooks%2C83&sr=1-1)
+  * [Modern Compiler Implementation in C](https://www.cs.princeton.edu/~appel/modern/c/)
+  * [Writing a C Compiler](https://norasandler.com/2017/11/29/Write-a-Compiler.html)
+  * [Writing An Interpreter In Go](https://interpreterbook.com/)
+  * [Writing A Compiler In Go](https://compilerbook.com/)
+* Cool Language
+  * [Cool manual](./assets/cool-manual.pdf)([Online](https://web.stanford.edu/class/cs143/materials/cool-manual.pdf))
+* LLVM
+  * [LLVM](http://www.aosabook.org/en/llvm.html)
+  * https://tomassetti.me/a-tutorial-on-how-to-write-a-compiler-using-llvm/
+  * https://llvm.org/docs/tutorial/MyFirstLanguageFrontend/index.html
+  * [Compilers and IRs: LLVM IR, SPIR-V, and MLIR](https://www.lei.chat/posts/compilers-and-irs-llvm-ir-spirv-and-mlir/)
+  * [Superoptimizing LLVM](https://www.youtube.com/watch?v=Ux0YnVEaI6A)
+* Lexical Scanning/ANTLR
+    * [Lexical Scanning in Go - Rob Pike](https://www.youtube.com/watch?v=HxaD_trXwRE)
+    * [Getting Started with ANTLR in C++](https://tomassetti.me/getting-started-antlr-cpp/)
