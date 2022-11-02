@@ -134,8 +134,8 @@ class Main inherit A2i{
 
 # LLVM
 LLVM is a compiler [infrastructure](https://llvm.org/pubs/2008-10-04-ACAT-LLVM-Intro.pdf). LLVM can be used to implement 
-compilers for other languages. This is possible because how LLVM's is designed to be re-used. LLVM is implemented as a set of re-usable 
-compiler components (for e.g. a re-usable X86 code generator so that a new compiler can re-use that code generator) that can re-used in other compiler implementations. This is the main benefit of LLVM compared to a monolithic 
+compilers for other languages. This is possible because how LLVM is designed to be re-used. LLVM is implemented as a set of re-usable 
+compiler components (for e.g. a re-usable X86 code generator so that a new compiler can re-use that code generator). This is the main benefit of LLVM compared to a monolithic 
 compiler project like [gcc](https://gcc.gnu.org). 
 
 ![LLVM Architecture](./figures/LLVM.svg)
@@ -181,6 +181,8 @@ $ cmake -G 'Unix Makefiles' \
 # LLVM Frontend for Cool using ANTLR
 
 # References
+* Cool Language
+  * [Cool manual](./assets/cool-manual.pdf)([Online](https://web.stanford.edu/class/cs143/materials/cool-manual.pdf))
 * Compiler Implementation
   * [CS 143 Compilers](https://web.stanford.edu/class/cs143/)
   * [Compilers (edX)](https://learning.edx.org/course/course-v1:StanfordOnline+SOE.YCSCS1+2T2020/home)
@@ -189,10 +191,9 @@ $ cmake -G 'Unix Makefiles' \
   * [Writing a C Compiler](https://norasandler.com/2017/11/29/Write-a-Compiler.html)
   * [Writing An Interpreter In Go](https://interpreterbook.com/)
   * [Writing A Compiler In Go](https://compilerbook.com/)
-* Cool Language
-  * [Cool manual](./assets/cool-manual.pdf)([Online](https://web.stanford.edu/class/cs143/materials/cool-manual.pdf))
 * LLVM
   * [LLVM](http://www.aosabook.org/en/llvm.html)
+  * [Mapping High Level Constructs to LLVM IR](https://mapping-high-level-constructs-to-llvm-ir.readthedocs.io/en/latest/a-quick-primer/index.html)
   * https://tomassetti.me/a-tutorial-on-how-to-write-a-compiler-using-llvm/
   * https://llvm.org/docs/tutorial/MyFirstLanguageFrontend/index.html
   * [Compilers and IRs: LLVM IR, SPIR-V, and MLIR](https://www.lei.chat/posts/compilers-and-irs-llvm-ir-spirv-and-mlir/)
