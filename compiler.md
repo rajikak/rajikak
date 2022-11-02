@@ -134,15 +134,25 @@ class Main inherit A2i{
 
 # LLVM
 LLVM is a compiler [infrastructure](https://llvm.org/pubs/2008-10-04-ACAT-LLVM-Intro.pdf). LLVM can be used to implement 
-compilers for other languages. This is possible because LLVM's modular architecture. LLVM is implemented as a set of re-usable 
-compiler components (for e.g. a re-usable x86 code generator so that a new compiler can re-use that code generator) that can re-used in other compiler implementations. This is the main benefit of LLVM compared to a monolithic 
+compilers for other languages. This is possible because how LLVM's is designed to be re-used. LLVM is implemented as a set of re-usable 
+compiler components (for e.g. a re-usable X86 code generator so that a new compiler can re-use that code generator) that can re-used in other compiler implementations. This is the main benefit of LLVM compared to a monolithic 
 compiler project like [gcc](https://gcc.gnu.org). 
 
 ![LLVM Architecture](./figures/LLVM.svg)
 
+Figure1: LLVM's modular architecture              
+
+LLVM can be subdivided into three major components: the frontend, the intermediate representation (IR) and the backend. The 
+frontend is responsible for translating input source code (for e.g. C/C++, Rust or Cool programs). We will look how to write a 
+LLVM frontend as part of `Cool` compiler implementation in this tutorial. The IR is the core of the LLVM. The IR provides the most 
+significant benefit of LLVM for compiler implementers.
+
+## LLVM IR
+
 
 ## Installing 
-In order to implement a compiler, we need to install LLVM libraries https://llvm.org/docs/GettingStarted.html#getting-started-with-llvm.
+In order to implement a compiler with LLVM, we need to install LLVM libraries https://llvm.org/docs/GettingStarted.html#getting-started-with-llvm.
+I am using below steps for compling and installing LLVM on a Linux system:
 
 Install cmake and add the bin path into `PATH`:                                                  
 ```
@@ -150,7 +160,7 @@ $ wget https://github.com/Kitware/CMake/releases/download/v3.24.2/cmake-3.24.2-l
 $ tar -xvf cmake-3.24.2-linux-x86_64.tar.gz
 ```
 
-I am using below steps for compling and installing LLVM on a Linux system:
+
 ```
 $ yum install -y git gcc gcc-c++ python zlib make
 $ pwd
@@ -170,6 +180,7 @@ $ cmake -G 'Unix Makefiles' \
 * [CS 143 Compilers](https://web.stanford.edu/class/cs143/)
 * [Compilers (edX)](https://learning.edx.org/course/course-v1:StanfordOnline+SOE.YCSCS1+2T2020/home)
 * [Engineering A Compiler](https://www.amazon.com/Engineering-Compiler-Keith-D-Cooper/dp/0128154128/ref=sr_1_1?keywords=engineering+a+compiler&qid=1666828042&qu=eyJxc2MiOiIxLjcwIiwicXNhIjoiMS40MyIsInFzcCI6IjEuNjkifQ%3D%3D&s=books&sprefix=Engineegin+a+compiler%2Cstripbooks%2C83&sr=1-1)
+* [Writing a C Compiler](https://norasandler.com/2017/11/29/Write-a-Compiler.html)
 * [Writing An Interpreter In Go](https://interpreterbook.com/)
 * [Writing A Compiler In Go](https://compilerbook.com/)
 * [Cool manual](./assets/cool-manual.pdf)([Online](https://web.stanford.edu/class/cs143/materials/cool-manual.pdf))
