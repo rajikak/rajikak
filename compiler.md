@@ -193,11 +193,14 @@ $ cmake -G 'Unix Makefiles' \
   * [Writing A Compiler In Go](https://compilerbook.com/)
 * LLVM
   * [LLVM](http://www.aosabook.org/en/llvm.html)
+  * [Getting Started with the LLVM System](https://llvm.org/docs/GettingStarted.html)
+  * [Creating an LLVM Project](https://llvm.org/docs/Projects.html)
   * [Mapping High Level Constructs to LLVM IR](https://mapping-high-level-constructs-to-llvm-ir.readthedocs.io/en/latest/a-quick-primer/index.html)
   * https://tomassetti.me/a-tutorial-on-how-to-write-a-compiler-using-llvm/
   * https://llvm.org/docs/tutorial/MyFirstLanguageFrontend/index.html
   * [Compilers and IRs: LLVM IR, SPIR-V, and MLIR](https://www.lei.chat/posts/compilers-and-irs-llvm-ir-spirv-and-mlir/)
   * [Superoptimizing LLVM](https://www.youtube.com/watch?v=Ux0YnVEaI6A)
+  * 
 * Lexical Scanning/ANTLR
     * [Lexical Scanning in Go - Rob Pike](https://www.youtube.com/watch?v=HxaD_trXwRE)
     * [Getting Started with ANTLR in C++](https://tomassetti.me/getting-started-antlr-cpp/)
