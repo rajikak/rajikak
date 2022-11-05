@@ -200,7 +200,8 @@ $ cmake -G 'Unix Makefiles' \
   * https://llvm.org/docs/tutorial/MyFirstLanguageFrontend/index.html
   * [Compilers and IRs: LLVM IR, SPIR-V, and MLIR](https://www.lei.chat/posts/compilers-and-irs-llvm-ir-spirv-and-mlir/)
   * [Superoptimizing LLVM](https://www.youtube.com/watch?v=Ux0YnVEaI6A)
-  * 
+  * [LLVM examples](https://github.com/llvm/llvm-project/tree/main/llvm/examples) 
+  * [First Compiler using LLVM](https://www.wilfred.me.uk/blog/2015/02/21/my-first-llvm-compiler/)
 * Lexical Scanning/ANTLR
     * [Lexical Scanning in Go - Rob Pike](https://www.youtube.com/watch?v=HxaD_trXwRE)
     * [Getting Started with ANTLR in C++](https://tomassetti.me/getting-started-antlr-cpp/)
