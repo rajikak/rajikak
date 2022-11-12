@@ -281,6 +281,44 @@ $ lli hello.bc
 hello world
 ```      
 
+LLVM optimizer (`opt`) support large number of optimization.
+```
+$ opt -mem2reg hello.bc -o hello.opt.bc
+$ llc hello.opt.bc -o hello.opt.s 
+```
+```
+$ cat hello.opt.s
+cat hello.opt.s 
+	.text
+	.file	"hello.c"
+	.globl	main                            # -- Begin function main
+	.p2align	4, 0x90
+	.type	main,@function
+main:                                   # @main
+	.cfi_startproc
+# %bb.0:
+	pushq	%rax
+	.cfi_def_cfa_offset 16
+	movl	$.Lstr, %edi
+	callq	puts@PLT
+	xorl	%eax, %eax
+	popq	%rcx
+	.cfi_def_cfa_offset 8
+	retq
+.Lfunc_end0:
+	.size	main, .Lfunc_end0-main
+	.cfi_endproc
+                                        # -- End function
+	.type	.Lstr,@object                   # @str
+	.section	.rodata.str1.1,"aMS",@progbits,1
+.Lstr:
+	.asciz	"hello world"
+	.size	.Lstr, 12
+
+	.ident	"clang version 16.0.0 (https://github.com/llvm/llvm-project.git 22a4b336a6ff7db1ab5b5b050c452259a3710dae)"
+	.section	".note.GNU-stack","",@progbits
+```
+
 # LLVM Frontend for Cool using ANTLR
 
 # References
@@ -303,7 +341,7 @@ hello world
   * https://llvm.org/docs/tutorial/MyFirstLanguageFrontend/index.html
   * [Compilers and IRs: LLVM IR, SPIR-V, and MLIR](https://www.lei.chat/posts/compilers-and-irs-llvm-ir-spirv-and-mlir/)
   * [Superoptimizing LLVM](https://www.youtube.com/watch?v=Ux0YnVEaI6A)
-  * 
+  * [A Complete Guide to LLVM for Programming Language Creators](https://mukulrathi.com/create-your-own-programming-language/llvm-ir-cpp-api-tutorial/)
 * Lexical Scanning/ANTLR
     * [Lexical Scanning in Go - Rob Pike](https://www.youtube.com/watch?v=HxaD_trXwRE)
     * [Getting Started with ANTLR in C++](https://tomassetti.me/getting-started-antlr-cpp/)
