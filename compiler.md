@@ -342,6 +342,8 @@ main:                                   # @main
   * [Compilers and IRs: LLVM IR, SPIR-V, and MLIR](https://www.lei.chat/posts/compilers-and-irs-llvm-ir-spirv-and-mlir/)
   * [Superoptimizing LLVM](https://www.youtube.com/watch?v=Ux0YnVEaI6A)
   * [A Complete Guide to LLVM for Programming Language Creators](https://mukulrathi.com/create-your-own-programming-language/llvm-ir-cpp-api-tutorial/)
+  * [How a Go Program Compiles down to Machine Code](https://getstream.io/blog/how-a-go-program-compiles-down-to-machine-code/)
+  * [Mapping High Level Constructs to LLVM IR](https://mapping-high-level-constructs-to-llvm-ir.readthedocs.io/en/latest/README.html)
 * Lexical Scanning/ANTLR
     * [Lexical Scanning in Go - Rob Pike](https://www.youtube.com/watch?v=HxaD_trXwRE)
     * [Getting Started with ANTLR in C++](https://tomassetti.me/getting-started-antlr-cpp/)
