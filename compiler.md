@@ -175,6 +175,7 @@ $ cmake -G 'Unix Makefiles' \
         -DLLVM_TARGETS_TO_BUILD='X86' \
         -DLLVM_ENABLE_PROJECTS='clang;lldb;lld;mlir;clang-tools-extra;compiler-rt' \
         ../llvm 
+$ make;make install
 ```
 
 ### Using LLVM Tool Chain
@@ -239,7 +240,7 @@ LLVM linker can be used to link two or more LLVM bitcode files to output to a si
 $ llvm-link first.bc second.bc -o combined.bc 
 ```
 
-LLVM `llc` can be used to compile LLVM bitcode to target assembly.
+LLVM IR compiler `llc` can be used to compile LLVM bitcode to target assembly.
 ```
 $ llc hello.bc -o hello.s
 ```
