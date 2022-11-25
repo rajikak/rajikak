@@ -37,6 +37,8 @@ $ cmake -G 'Unix Makefiles' -DCMAKE_BUILD_TYPE=Release \
 $ make;make install 
 ```
 
+Add `/Users/ec2-user/llvm-project/build/bin` into `$PATH`. 
+
 ## Building LLVM on a Linux System
 Install cmake and add the bin path into PATH:
 ```
@@ -64,3 +66,5 @@ $ cmake -G 'Unix Makefiles' \
         ../llvm 
 $ make;make install
 ```
+
+Add `/home/ec2-user/llvm-project/build/bin` into `$PATH`.
