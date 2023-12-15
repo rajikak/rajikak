@@ -29,7 +29,7 @@ $ cd llvm-project/build
 $ cmake -G 'Unix Makefiles' -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_PREFIX=/Users/kumarasiri/work/intbricks/llvm-project/install \
     -DLLVM_TARGETS_TO_BUILD='AArch64' \
-    -DLLVM_ENABLE_PROJECTS='clang;lldb;lld;mlir;clang-tools-extra' \
+    -DLLVM_ENABLE_PROJECTS='clang;lld;lldb;mlir;clang-tools-extra;libcxx;libc' \
     -DCMAKE_OSX_ARCHITECTURES='arm64' \
     -DLLDB_USE_SYSTEM_DEBUGSERVER=ON  \
     -DLLDB_INCLUDE_TESTS=OFF \
