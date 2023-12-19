@@ -17,13 +17,30 @@ Verify the installation:
 ```
 $ xcode-select -p
 /Library/Developer/CommandLineTools
+
+$ which clang++
+/usr/bin/clang++
+
+$ /usr/bin/clang++ -v
+Apple clang version 14.0.0 (clang-1400.0.29.202)
+Target: arm64-apple-darwin21.5.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+
+$ /usr/bin/clang -v
+Apple clang version 14.0.0 (clang-1400.0.29.202)
+Target: arm64-apple-darwin21.5.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
 ```
 
-Compile and install LLVM from the source:
+Compile and install LLVM from the source (based on above tool chain version, download the appropiate LLVM release version).
+This is to ensure new compiler code can be compiled against the System libraries without any issue. Example below shows how to
+compile the development version:
 ```
 $ pwd
 /Users/kumarasiri/
-$ git clone https://github.com/llvm/llvm-project.git
+$ git clone https://github.com/llvm/llvm-project.git # or wget https://github.com/llvm/llvm-project/archive/refs/tags/llvmorg-14.0.0.tar.gz
 $ mkdir llvm-project/install
 $ cd llvm-project/build
 $ cmake -G 'Unix Makefiles' -DCMAKE_BUILD_TYPE=Release \
