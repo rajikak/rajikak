@@ -22,15 +22,15 @@ $ xcode-select -p
 Compile and install LLVM from the source:
 ```
 $ pwd
-/Users/kumarasiri/work/intbricks/llvm-project/
+/Users/kumarasiri/
 $ git clone https://github.com/llvm/llvm-project.git
 $ mkdir llvm-project/install
 $ cd llvm-project/build
 $ cmake -G 'Unix Makefiles' -DCMAKE_BUILD_TYPE=Release \
-    -DCMAKE_INSTALL_PREFIX=/Users/kumarasiri/work/intbricks/llvm-project/install \
+    -DCMAKE_INSTALL_PREFIX=/Users/kumarasiri/llvm-project/install \
     -DLLVM_TARGETS_TO_BUILD='AArch64' \
-    -DLLVM_ENABLE_PROJECTS='bolt;clang;clang-tools-extra;libc;libclc;lld;lldb;mlir' \
-	-DLLVM_ENABLE_RUNTIMES="libcxx;libcxxabi;libunwind;libc" \
+    -DLLVM_ENABLE_PROJECTS='bolt;clang;clang-tools-extra;libclc;lld;lldb;mlir' \
+	-DLLVM_ENABLE_RUNTIMES='libcxx;libcxxabi;libunwind' \
     -DCMAKE_OSX_ARCHITECTURES='arm64' \
     -DLLDB_USE_SYSTEM_DEBUGSERVER=ON  \
     -DLLDB_INCLUDE_TESTS=OFF \
@@ -38,7 +38,7 @@ $ cmake -G 'Unix Makefiles' -DCMAKE_BUILD_TYPE=Release \
 $ make;make install 
 ```
 
-Add `/Users/kumarasiri/work/intbricks/llvm-project/install/bin` into `$PATH`. 
+Add `/Users/kumarasiri/llvm-project/install/bin` into `$PATH`. 
 
 ## Building LLVM on a Linux System
 Install cmake and add the bin path into PATH:
