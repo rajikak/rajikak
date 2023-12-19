@@ -22,9 +22,9 @@ $ xcode-select -p
 Compile and install LLVM from the source:
 ```
 $ pwd
-/Users/ec2-user/
+/Users/kumarasiri/work/intbricks/llvm-project/
 $ git clone https://github.com/llvm/llvm-project.git
-$ mkdir llvm-project/build
+$ mkdir llvm-project/install
 $ cd llvm-project/build
 $ cmake -G 'Unix Makefiles' -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_PREFIX=/Users/kumarasiri/work/intbricks/llvm-project/install \
@@ -38,7 +38,7 @@ $ cmake -G 'Unix Makefiles' -DCMAKE_BUILD_TYPE=Release \
 $ make;make install 
 ```
 
-Add `/Users/ec2-user/llvm-project/build/bin` into `$PATH`. 
+Add `/Users/kumarasiri/work/intbricks/llvm-project/install/bin` into `$PATH`. 
 
 ## Building LLVM on a Linux System
 Install cmake and add the bin path into PATH:
@@ -57,7 +57,7 @@ Compile and install LLVM from the source:
 $ pwd
 /home/ec2-user/
 $ git clone https://github.com/llvm/llvm-project.git
-$ mkdir llvm-project/build
+$ mkdir llvm-project/install
 $ cd llvm-project/build
 $ cmake -G 'Unix Makefiles' \
         -DCMAKE_BUILD_TYPE=Release \
@@ -68,4 +68,4 @@ $ cmake -G 'Unix Makefiles' \
 $ make;make install
 ```
 
-Add `/home/ec2-user/llvm-project/build/bin` into `$PATH`.
+Add `/home/ec2-user/llvm-project/install/bin` into `$PATH`.
