@@ -17,4 +17,4 @@
 * [Linker written in Rust](https://github.com/rajikak/linker)
 * [Collection of Zig examples](https://github.com/rajikak/zig-examples)
 * [Writing a Compiler Using LLVM: Building a BigNum Calculator](https://github.com/rajikak/bignum)
-* [Collect of C systems programs](https://github.com/rajikak/system)
+* [Collection of C systems programs](https://github.com/rajikak/system)
