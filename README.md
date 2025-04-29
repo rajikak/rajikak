@@ -1,6 +1,6 @@
 - 🔭 Building tools and compilers for data, systems integrations and analytics. 
 - 🔧 Systems programming, application development to scientific computing. 
-- 🔨 Use Zig, Rust and Go. 
+<!--- 🔨 Use Zig, Rust and Go. -->
 
 <!--
 ## Writings
@@ -17,3 +17,4 @@
 * [Linker written in Rust](https://github.com/rajikak/linker)
 * [Collection of Zig examples](https://github.com/rajikak/zig-examples)
 * [Writing a Compiler Using LLVM: Building a BigNum Calculator](https://github.com/rajikak/bignum)
+* [Collect of C systems programs](https://github.com/rajikak/system)
