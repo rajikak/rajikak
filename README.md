@@ -14,7 +14,7 @@
 * [Design and Implementation of a REST API for Curricular data in Higher Education](https://github.com/rajikak/curricular-api) 
 * [Parser for parsing REST query parameters](https://github.com/rajikak/query-parser)
 * [High performance EDI parser written in Zig](https://github.com/rajikak/edi)
-* [Linker written in Rust](https://github.com/rajikak/linker)
+* [A simple tool-chain written in Rust](https://github.com/rajikak/linker)
 * [Collection of Zig examples](https://github.com/rajikak/zig-examples)
 * [Writing a Compiler Using LLVM: Building a BigNum Calculator](https://github.com/rajikak/bignum)
 * [Collection of C systems programs](https://github.com/rajikak/system)
