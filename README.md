@@ -1,6 +1,11 @@
+- 🔭 @wiscsoftware - Software development, UI/UX design and implementation, cloud-native application development, cloud cost optimizations and modernization of legacy applications.
+- 🔧 @intbricks - Tools and services for data integrations for users of all technical levels.
+- 🔨 @wiscmath - Tools and libraries for math and AI/ML.
+
+<!--
 - 🔭 Building tools and compilers for data, systems integrations and analytics. 
 - 🔧 Systems programming, application development to scientific computing. 
-<!--- 🔨 Use Zig, Rust and Go. -->
+🔨 Use Zig, Rust and Go. -->
 
 <!--
 ## Writings
@@ -8,7 +13,6 @@
 * [LLVM Tool Chain](llvm-tool-chain.md)
 * [Writing a Compiler Using LLVM: Cool Language](./compiler.md)
 * [Writing a Compiler Using LLVM: Building a BigNum Calculator](https://github.com/rajikak/bignum/blob/main/README.md)
--->
 
 ### Projects
 * [Design and Implementation of a REST API for Curricular data in Higher Education](https://github.com/rajikak/curricular-api) 
@@ -18,3 +22,4 @@
 * [Collection of Zig examples](https://github.com/rajikak/zig-examples)
 * [Writing a Compiler Using LLVM: Building a BigNum Calculator](https://github.com/rajikak/bignum)
 * [Collection of C systems programs](https://github.com/rajikak/system)
+-->
