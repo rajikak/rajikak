@@ -1,6 +1,9 @@
 - 🔭 [@wiscsoftware](https://github.com/wiscsoftware) - Software development, UI/UX design and implementation, cloud-native application development, cloud cost optimizations and modernization of legacy applications.
 - 🔧 [@intbricks](https://github.com/intbricks) - Tools and services for data integrations for users of all technical levels.
+
+<!--
 - 🔨 [@wiscmath](https://github.com/wiscmath) - Tools and libraries for math, AI and ML.
+-->
 
 <!--
 - 🔭 Building tools and compilers for data, systems integrations and analytics. 
