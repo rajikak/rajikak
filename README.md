@@ -16,14 +16,14 @@
 * [Writing a Compiler Using LLVM: Building a BigNum Calculator](https://github.com/rajikak/bignum/blob/main/README.md)
 -->
 
-* [Design and Implementation of a REST API for Curricular data in Higher Education](https://github.com/rajikak/curricular-api) 
-* [Parser for parsing REST query parameters](https://github.com/rajikak/query-parser)
-* [High performance EDI parser written in Zig](https://github.com/rajikak/edi)
-* [Collection of system tools written in Rust](https://github.com/rajikak/tool-chain)
 
 <!--
 ### Projects
-* [Collection of Zig examples](https://github.com/rajikak/zig-examples)
+* [Design and Implementation of a REST API for Curricular data in Higher Education](https://github.com/rajikak/curricular-api) 
+* [High performance EDI parser written in Zig](https://github.com/rajikak/edi)
 * [Writing a Compiler Using LLVM: Building a BigNum Calculator](https://github.com/rajikak/bignum)
+* [Collection of system tools written in Rust](https://github.com/rajikak/tool-chain)
+* [Parser for parsing REST query parameters](https://github.com/rajikak/query-parser)
+* [Collection of Zig examples](https://github.com/rajikak/zig-examples)
 * [Collection of C systems programs](https://github.com/rajikak/system)
 -->
