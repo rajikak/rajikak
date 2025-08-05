@@ -1,9 +1,8 @@
 ### Hi 👋
 
-
+<!--
 - 🔧 Systems programming, scientific computing, AI/ML and distributed systems development.
 - 🔭 End-consumer facing application development.
-<!--
 - 🔭 [@wiscsoftware](https://github.com/wiscsoftware) - Software development, UI/UX design and implementation, cloud-native application development, cloud cost optimizations, AI/ML data-pipelines and AI agents implementation and modernization of legacy applications.
 - 🔧 [@intbricks](https://github.com/intbricks) - Tools and services for data integrations for users of all technical levels.
 - 🔨 [@anvilci](https://github.com/anvilci) - Low latency, low cost build tools.
