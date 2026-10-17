@@ -41,7 +41,7 @@ compile the development version:
 $ pwd
 /Users/kumarasiri/
 $ git clone https://github.com/llvm/llvm-project.git # or wget https://github.com/llvm/llvm-project/archive/refs/tags/llvmorg-14.0.0.tar.gz
-$ mkdir llvm-project/install
+$ mkdir llvm-project/build
 $ cd llvm-project/build
 $ cmake -G 'Unix Makefiles' ../llvm \ 
 -DCMAKE_BUILD_TYPE=Release  \
