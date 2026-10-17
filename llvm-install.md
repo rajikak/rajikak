@@ -43,6 +43,17 @@ $ pwd
 $ git clone https://github.com/llvm/llvm-project.git # or wget https://github.com/llvm/llvm-project/archive/refs/tags/llvmorg-14.0.0.tar.gz
 $ mkdir llvm-project/install
 $ cd llvm-project/build
+$ cmake -G 'Unix Makefiles' ../llvm \ 
+-DCMAKE_BUILD_TYPE=Release  \
+-DCMAKE_CXX_STANDARD=17  \
+-DLLVM_TARGETS_TO_BUILD='AArch64;X86;RISCV' \
+-DLLVM_ENABLE_PROJECTS='clang;clang-tools-extra;' \
+-DCMAKE_OSX_ARCHITECTURES='arm64'     
+-DLLDB_USE_SYSTEM_DEBUGSERVER=ON      
+-DLLDB_INCLUDE_TESTS=OFF
+
+# previously used below
+
 $ cmake -G 'Unix Makefiles' -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_PREFIX=/Users/kumarasiri/llvm-project/install \
     -DLLVM_TARGETS_TO_BUILD='AArch64' \
